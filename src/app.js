@@ -8,6 +8,10 @@ const app=express();
 app.use(express.json());
 app.use(cookieParser());
 
+
+app.get('/',(req,res)=>{
+    res.send('Welcome to the Banking API');
+});
 app.use('/api/auth/',authRoutes);
 app.use('/api/accounts/',accRoutes);
 app.use('/api/transactions/',transactionRoutes);
